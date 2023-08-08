@@ -1,0 +1,21 @@
+{
+    "name": "CSS Module Class Name Converter",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "Convert CSS Module class names into file paths",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "commands": {
+        "inject-script": {
+            "suggested_key": "MacCtrl+Shift+C",
+            "description": "Convert CSS Module class name"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ]
+}
